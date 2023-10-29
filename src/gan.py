@@ -76,8 +76,8 @@ def plot_generated_images(epoch, generator, examples=10, dim=(1, 10), figsize=(1
         plt.imshow(1 - generated_images[i], cmap='gray', interpolation='nearest')
         plt.axis('off')
     plt.tight_layout()
-    plt.savefig(f'gan_generated_image_epoch_{epoch}.png')
+    plt.savefig(f'../models/gan_generated_image_epoch_{epoch}.png')
 
 
 train_gan(epochs=100, batch_size=128)
-generator.save('generator_model.keras')
+generator.save('../models/generator_model.keras')
